@@ -122,6 +122,7 @@ public class Main2Activity extends BaseAty implements OnItemClickListener {
     @Override
     public void onItemClick(int position) {
         toast("你点击了" + position + "张图片");
+        jump(Main3Activity.class);
     }
 
     /**
