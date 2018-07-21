@@ -1,7 +1,7 @@
 package administrator.example.com.mykuangjia.base;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 
 import administrator.example.com.framing.BaseActivity;
 
@@ -12,4 +12,5 @@ import administrator.example.com.framing.BaseActivity;
  */
 
 public abstract class BaseAty extends BaseActivity{
+
 }

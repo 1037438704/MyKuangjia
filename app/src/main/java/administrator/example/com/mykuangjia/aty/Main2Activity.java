@@ -92,6 +92,7 @@ public class Main2Activity extends BaseAty implements OnItemClickListener {
     private void shujuqingqiu() {
         //数据请求
 //        new HttpUtils();
+
         text_context.setText("开始请求数据");
         HttpRequest.POST(me, "http://taoback.txunda.com/index.php/Api/Shop/getGoodsList", new Parameter().add("keywords", "衣服")
                 .add("p", "1")
