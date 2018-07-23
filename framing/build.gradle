@@ -25,12 +25,14 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     // RecyclerView
     //noinspection GradleCompatible
-    compile 'com.android.support:recyclerview-v7:26.+'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    api 'com.android.support:recyclerview-v7:26.+'
+    api 'com.squareup.okhttp3:okhttp:3.4.1'
+    api 'com.android.support:appcompat-v7:27.1.1'
     //gson
-    compile 'com.google.code.gson:gson:2.6.2'
+    api 'com.google.code.gson:gson:2.6.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api 'com.android.support:design:27.1.0'
+    api 'com.kongzue.dialog:dialog:2.2.4'
 }

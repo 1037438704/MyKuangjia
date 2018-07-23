@@ -4,14 +4,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import com.google.gson.Gson;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +27,6 @@ import administrator.example.com.mykuangjia.R;
 import administrator.example.com.mykuangjia.adapter.ShopAdapter;
 import administrator.example.com.mykuangjia.base.BaseAty;
 import administrator.example.com.mykuangjia.entity.ShopBean;
-import administrator.example.com.mykuangjia.util.HttpUtils;
 import administrator.example.com.mykuangjia.view.LocalImageHolderView;
 
 /**
@@ -39,23 +37,25 @@ import administrator.example.com.mykuangjia.view.LocalImageHolderView;
 @NavigationBarBackgroundColor(a = 0, r = 0, g = 0, b = 0)
 //透明颜色   设置底部导航栏背景颜色（a = 255,r = 255,g = 255,b = 255 黑色的)
 @DarkNavigationBarTheme(true) //开启底部导航栏按钮暗色模式
+
 public class Main2Activity extends BaseAty implements OnItemClickListener {
     private ConvenientBanner convenientBanner;
     private List<Integer> list;
     private LinearLayout btn_back;
     private RecyclerView recyclerView;
-    private Button button_huoqushuju;
     private ShopAdapter shopAdapter;
-    private TextView text_context;
+    private SmartRefreshLayout swipeLayout;
+
+    private int count = 1;
 
     @Override
     public void initViews() {
-        text_context = findViewById(R.id.text_context);
         convenientBanner = findViewById(R.id.convenientBanner);
         list = new ArrayList<>();
         btn_back = findViewById(R.id.btn_back);
         recyclerView = findViewById(R.id.recyclerView);
-        button_huoqushuju = findViewById(R.id.button_huoqushuju);
+        swipeLayout = findViewById(R.id.swipeLayout);
+
         //创建布局管理
         LinearLayoutManager layoutManager = new LinearLayoutManager(me);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -69,6 +69,7 @@ public class Main2Activity extends BaseAty implements OnItemClickListener {
         list.add(R.mipmap.ali);
         list.add(R.mipmap.ali);
         btn_back.setY(getStatusBarHeight());
+        shujuqingqiu();
         lunBoTu();
     }
 
@@ -81,19 +82,11 @@ public class Main2Activity extends BaseAty implements OnItemClickListener {
                 finish();
             }
         });
-        button_huoqushuju.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                shujuqingqiu();
-            }
-        });
     }
 
     private void shujuqingqiu() {
         //数据请求
 //        new HttpUtils();
-
-        text_context.setText("开始请求数据");
         HttpRequest.POST(me, "http://taoback.txunda.com/index.php/Api/Shop/getGoodsList", new Parameter().add("keywords", "衣服")
                 .add("p", "1")
                 .add("cid", "1")
@@ -148,5 +141,4 @@ public class Main2Activity extends BaseAty implements OnItemClickListener {
                 //设置手动影响（设置了该项无法手动切换）
                 .setManualPageable(true);
     }
-
 }

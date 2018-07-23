@@ -14,7 +14,9 @@ import administrator.example.com.mykuangjia.R;
 import administrator.example.com.mykuangjia.entity.IndexBean;
 
 /**
- * Created by dell-pc on 2018/7/21.
+ *
+ * @author dell-pc
+ * @date 2018/7/21
  */
 
 public class IndexAdapter extends BaseQuickAdapter<IndexBean.DataBean.GoodsListBean,BaseViewHolder> {

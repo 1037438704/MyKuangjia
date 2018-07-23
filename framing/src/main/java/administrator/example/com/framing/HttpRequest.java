@@ -34,7 +34,9 @@ import okhttp3.Response;
 
 /**
  * BaseOkHttp
- * Created by myzcx on 2017/12/27.
+ *
+ * @author myzcx
+ * @date 2017/12/27
  * ver:2.0
  */
 

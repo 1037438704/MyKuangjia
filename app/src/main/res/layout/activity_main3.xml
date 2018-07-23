@@ -16,16 +16,19 @@
 
         <include layout="@layout/aty_title_head" />
 
-        <LinearLayout
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
+            android:background="#444444"
+            app:srlAccentColor="@android:color/white"
+            app:srlEnablePreviewInEditMode="true"
+            app:srlPrimaryColor="#444444">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </LinearLayout>
+                android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
     </LinearLayout>
 </LinearLayout>

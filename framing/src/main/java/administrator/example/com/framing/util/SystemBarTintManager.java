@@ -23,6 +23,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 
+/**
+ * @author dell-pc
+ */
 public class SystemBarTintManager {
     /**
      * The default system bar tint color value.

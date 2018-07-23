@@ -17,6 +17,9 @@ import administrator.example.com.framing.util.OnPermissionResponseListener;
 import administrator.example.com.framing.util.OnResponseListener;
 
 
+/**
+ * @author dell-pc
+ */
 public abstract class BaseFragment extends Fragment {
     
     public int layoutResId = -1;

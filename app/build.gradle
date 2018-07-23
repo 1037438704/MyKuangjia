@@ -35,6 +35,8 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
     //RecyclerView 的适配器
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
-    implementation 'com.kongzue.dialog:dialog:2.2.4'
     implementation project(':framing')
+    //下拉刷新
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+
 }

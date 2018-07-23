@@ -2,6 +2,10 @@ package administrator.example.com.framing.util;
 
 import java.util.HashMap;
 import java.util.Map;
+
+/**
+ * @author dell-pc
+ */
 public class JumpParameter {
     
     private Map<String, Object> datas;

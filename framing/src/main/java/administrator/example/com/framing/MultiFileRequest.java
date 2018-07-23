@@ -26,7 +26,9 @@ import static administrator.example.com.framing.HttpRequest.serviceUrl;
 
 /**
  * 多文件上传
- * Created by myzcx on 2018/1/9.
+ *
+ * @author myzcx
+ * @date 2018/1/9
  * ver:1.1
  */
 

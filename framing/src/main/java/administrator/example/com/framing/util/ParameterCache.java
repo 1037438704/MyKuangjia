@@ -3,6 +3,9 @@ package administrator.example.com.framing.util;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author dell-pc
+ */
 public class ParameterCache {
 
     private static ParameterCache parameterCache;

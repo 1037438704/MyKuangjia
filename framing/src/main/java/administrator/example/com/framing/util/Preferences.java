@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by Kongzue on 2017/3/28.
- * Version 2.0
+ *
+ * @date 2017/3/28
  * Update 2018.5.27
  */
 

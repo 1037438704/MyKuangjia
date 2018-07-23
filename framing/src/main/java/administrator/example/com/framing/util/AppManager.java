@@ -8,9 +8,7 @@ import java.util.Stack;
 import administrator.example.com.framing.BaseActivity;
 
 /**
- * @link https://xiaohaibin.github.io/
- * @email： xhb_199409@163.com
- * @github: https://github.com/xiaohaibin
+ * @author dell-pc
  * @describe: Activity管理工具类
  */
 public class AppManager {

@@ -12,6 +12,9 @@ import administrator.example.com.framing.interfaces.MultipleMapAdapterSettings;
 import administrator.example.com.framing.interfaces.SimpleAdapterSettings;
 import administrator.example.com.framing.interfaces.SimpleMapAdapterSettings;
 
+/**
+ * @author dell-pc
+ */
 public class BaseAdapter extends android.widget.BaseAdapter {
     
     private LayoutInflater mInflater;
