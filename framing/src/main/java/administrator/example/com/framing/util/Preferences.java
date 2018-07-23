@@ -71,7 +71,7 @@ public class Preferences {
         editor.commit();
     }
 
-    //清除（清空）所有属性的方法
+    //清楚(清空)所有属性的方法
     public void cleanAll(Context context, String path){
         SharedPreferences sp=context.getSharedPreferences(path, Context.MODE_PRIVATE);
         if(sp!=null) {

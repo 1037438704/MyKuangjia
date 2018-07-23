@@ -3,11 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyKuangjia.iml" filepath="$PROJECT_DIR$/MyKuangjia.iml" />
-      <module fileurl="file://C:\Users\dell-pc\Desktop\MyKuangjia\MyKuangjia.iml" filepath="C:\Users\dell-pc\Desktop\MyKuangjia\MyKuangjia.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\dell-pc\Desktop\MyKuangjia\app\app.iml" filepath="C:\Users\dell-pc\Desktop\MyKuangjia\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/framing/framing.iml" filepath="$PROJECT_DIR$/framing/framing.iml" />
-      <module fileurl="file://C:\Users\dell-pc\Desktop\MyKuangjia\framing\framing.iml" filepath="C:\Users\dell-pc\Desktop\MyKuangjia\framing\framing.iml" />
     </modules>
   </component>
 </project>
