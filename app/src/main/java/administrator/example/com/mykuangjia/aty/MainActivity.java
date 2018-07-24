@@ -1,9 +1,14 @@
 package administrator.example.com.mykuangjia.aty;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.kongzue.kongzueupdatesdk.UpdateInfo;
+import com.kongzue.kongzueupdatesdk.UpdateUtil;
+
+import administrator.example.com.framing.BuildConfig;
 import administrator.example.com.framing.HttpRequest;
 import administrator.example.com.framing.interfaces.DarkNavigationBarTheme;
 import administrator.example.com.framing.interfaces.DarkStatusBarTheme;
@@ -32,6 +37,7 @@ public class MainActivity extends BaseAty {
     private Button button_1;
     private Button button_2;
     private Button button_3;
+    private UpdateInfo updateInfo;
 
 
     @Override
@@ -41,6 +47,16 @@ public class MainActivity extends BaseAty {
         button_1 = findViewById(R.id.button_1);
         button_2 = findViewById(R.id.button_2);
         button_3 = findViewById(R.id.button_3);
+
+
+        updateInfo = new UpdateInfo()
+                .setInfo("1.上线了极力要求以至于无法再拒绝的收入功能\n" +
+                        "2.出行的二级分类加入了地铁、地铁、地铁\n" +
+                        "3.「关于」新增应用商店评分入口，你们知道怎么做\n" +
+                        "4.「关于」还加入了GitHub地址，情怀+1s\n" +
+                        "5.全新的底层适配框架，优化更多机型")
+                .setVer("v2.5")
+                .setDownloadUrl("http://paywhere.kongzue.com/downloads/paywhere.apk");
     }
 
     @Override
@@ -57,13 +73,32 @@ public class MainActivity extends BaseAty {
                 jump(Main2Activity.class);
             }
         });
-        //带值跳转
+        //App更新
         button_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jump(MainActivity.class,new JumpParameter()
-                .put("can1","100000000000000000000000000")
-                );
+                UpdateUtil updateUtil = new UpdateUtil(me, BuildConfig.APPLICATION_ID)
+                        .setOnDownloadListener(new UpdateUtil.OnDownloadListener() {
+                            @Override
+                            public void onStart(long downloadId) {
+                                Log.i("MainActivity", "onStart: 下载开始");
+                            }
+
+                            @Override
+                            public void onDownloading(long downloadId, int progress) {
+                                Log.i("MainActivity", "onStart: 下载中：" + progress);
+                            }
+
+                            @Override
+                            public void onSuccess(long downloadId) {
+                                Log.i("MainActivity", "onStart: 下载完成");
+                            }
+                        })
+                        .showNormalUpdateDialog(updateInfo,
+                                "检查到更新（" + updateInfo.getVer() + "）",
+                                "从商店下载",
+                                "直接下载",
+                                "取消");
             }
         });
         //数据请求

@@ -22,6 +22,7 @@ import administrator.example.com.framing.interfaces.Layout;
 import administrator.example.com.framing.interfaces.NavigationBarBackgroundColor;
 import administrator.example.com.framing.listener.ResponseListener;
 import administrator.example.com.framing.util.JumpParameter;
+import administrator.example.com.framing.util.LogUtils;
 import administrator.example.com.framing.util.Parameter;
 import administrator.example.com.mykuangjia.R;
 import administrator.example.com.mykuangjia.adapter.ShopAdapter;
@@ -94,7 +95,7 @@ public class Main2Activity extends BaseAty implements OnItemClickListener {
             @Override
             public void onResponse(String response, Exception error) {
                 if (error == null) {
-                    toast(response);
+                    LogUtils.d(response);
                     Gson gson = new Gson();
                     ShopBean shopBean = gson.fromJson(response, ShopBean.class);
                     List<ShopBean.DataBean> data = shopBean.getData();
