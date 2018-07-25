@@ -30,6 +30,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.bigkoo:convenientbanner:2.0.5'//  这个是旧版的
-
     implementation project(':framing')
 }

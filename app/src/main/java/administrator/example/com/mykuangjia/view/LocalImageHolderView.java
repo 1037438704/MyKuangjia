@@ -5,7 +5,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bigkoo.convenientbanner.holder.Holder;
-import com.bumptech.glide.Glide;
 
 /**
  *
