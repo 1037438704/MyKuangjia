@@ -39,7 +39,7 @@ import administrator.example.com.mykuangjia.view.LocalImageHolderView;
 //透明颜色   设置底部导航栏背景颜色（a = 255,r = 255,g = 255,b = 255 黑色的)
 @DarkNavigationBarTheme(true) //开启底部导航栏按钮暗色模式
 
-public class Main2Activity extends BaseAty implements OnItemClickListener {
+public class Main2Activity extends BaseAty implements OnItemClickListener, View.OnClickListener {
     private ConvenientBanner convenientBanner;
     private List<Integer> list;
     private LinearLayout btn_back;
@@ -56,6 +56,7 @@ public class Main2Activity extends BaseAty implements OnItemClickListener {
         btn_back = findViewById(R.id.btn_back);
         recyclerView = findViewById(R.id.recyclerView);
         swipeLayout = findViewById(R.id.swipeLayout);
+        btn_back.setOnClickListener(this);
 
         //创建布局管理
         LinearLayoutManager layoutManager = new LinearLayoutManager(me);
@@ -141,5 +142,14 @@ public class Main2Activity extends BaseAty implements OnItemClickListener {
                 .setOnItemClickListener(this)
                 //设置手动影响（设置了该项无法手动切换）
                 .setManualPageable(true);
+    }
+
+    @Override
+    public void onClick(View view) {
+      switch(view.getId()){//View点击事件使用
+          case 0:
+              break;
+          default:
+      }
     }
 }

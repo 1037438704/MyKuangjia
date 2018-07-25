@@ -1,7 +1,5 @@
 package administrator.example.com.mykuangjia.aty;
 
-import android.os.Bundle;
-
 import administrator.example.com.framing.BaseActivity;
 import administrator.example.com.framing.interfaces.Layout;
 import administrator.example.com.framing.util.JumpParameter;

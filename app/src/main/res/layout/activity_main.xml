@@ -58,6 +58,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="数据请录" />
+            <Button
+                android:id="@+id/button_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="对话框界面" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

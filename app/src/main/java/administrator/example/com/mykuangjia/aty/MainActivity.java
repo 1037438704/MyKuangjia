@@ -37,8 +37,8 @@ public class MainActivity extends BaseAty {
     private Button button_1;
     private Button button_2;
     private Button button_3;
+    private Button button_4;
     private UpdateInfo updateInfo;
-
 
     @Override
     public void initViews() {
@@ -47,6 +47,7 @@ public class MainActivity extends BaseAty {
         button_1 = findViewById(R.id.button_1);
         button_2 = findViewById(R.id.button_2);
         button_3 = findViewById(R.id.button_3);
+        button_4 = findViewById(R.id.button_4);
 
 
         updateInfo = new UpdateInfo()
@@ -125,5 +126,28 @@ public class MainActivity extends BaseAty {
                 });
             }
         });
+        button_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
+    /**
+     * 再次返回键退出程序
+     */
+    private long lastBack = 0;
+
+    /**
+     * 再次返回键退出程序
+     */
+    @Override
+    public void onBackPressed() {
+        if (lastBack == 0 || System.currentTimeMillis() - lastBack > 2000) {
+            toast("再按一次返回退出程序");
+            lastBack = System.currentTimeMillis();
+            return;
+        }
+        super.onBackPressed();
     }
 }
