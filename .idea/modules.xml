@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyKuangjia.iml" filepath="$PROJECT_DIR$/MyKuangjia.iml" />
+      <module fileurl="file://S:\android3.0.1\MyKuangjia\MyKuangjia.iml" filepath="S:\android3.0.1\MyKuangjia\MyKuangjia.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://S:\android3.0.1\MyKuangjia\app\app.iml" filepath="S:\android3.0.1\MyKuangjia\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/framing/framing.iml" filepath="$PROJECT_DIR$/framing/framing.iml" />
+      <module fileurl="file://S:\android3.0.1\MyKuangjia\framing\framing.iml" filepath="S:\android3.0.1\MyKuangjia\framing\framing.iml" />
     </modules>
   </component>
 </project>

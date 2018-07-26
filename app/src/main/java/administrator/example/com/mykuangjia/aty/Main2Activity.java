@@ -101,7 +101,7 @@ public class Main2Activity extends BaseAty implements OnItemClickListener, View.
                     ShopBean shopBean = gson.fromJson(response, ShopBean.class);
                     List<ShopBean.DataBean> data = shopBean.getData();
                     shopAdapter = new ShopAdapter(R.layout.item_view_shop, data);
-                    //给RecyclerView设置适配器
+//                    给RecyclerView设置适配器
                     recyclerView.setAdapter(shopAdapter);
                     log("onResponse: " + response);
                 } else {
