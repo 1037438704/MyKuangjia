@@ -89,7 +89,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Deprecated
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //竖屏
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //竖屏
         initAttributes();
         if (layoutResId == android.R.layout.list_content) {
             Log.e("警告！", "请在您的Activity的Class上注解：@Layout(你的layout资源id)");
